@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anarchaeology</title>
+<meta name="description" content="Images from the early days of Anarchy Online, recovered from the Wayback Machine.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anarchaeology">
+<meta property="og:description" content="Images from the early days of Anarchy Online, recovered from the Wayback Machine.">
+<meta property="og:image" content="https://anarchaeology.github.io/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <img class="logo" src="logo.png" alt="" width="72" height="72">
+      <div>
+        <h1>Anarchaeology</h1>
+        <p class="lede">Images from the early days of Anarchy Online, recovered from the Wayback Machine.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Filters">
+  <div class="wrap bar">
+    <div class="pickers">
+      <label>Source <select id="site"><option value="">All sources</option></select></label>
+      <label>Search <input id="q" type="search" placeholder="file, site or folder" autocomplete="off"></label>
+      <span class="count" id="count"></span>
+      <button type="button" class="clear off" id="clear">Clear filters</button>
+    </div>
+  </div>
+</nav>
+
+<div class="filter-note" id="filter-note" hidden>
+  <span id="note-text"></span>
+  <button type="button" id="note-change">Change</button>
+  <button type="button" id="note-clear">Clear</button>
+</div>
+
+<main class="wrap" id="grid" aria-live="polite"></main>
+
+<section class="wrap about" id="about">
+  <h2>About this archive</h2>
+  <div class="about-cols">
+    <div>
+      <h3>How each picture is dated</h3>
+      <p>A picture's date is the earliest believable date found for it, from these sources:</p>
+      <ul class="date-kinds">
+        <li><b>Inside the file</b>: a date stored in the image itself.</li>
+        <li><b>In the address</b>: a date in the picture's original web address, such as a folder named 010617.</li>
+        <li><b>Server</b>: the original web server's last-modified date, usually the day it was uploaded.</li>
+        <li><b>Forum</b>: the day it was first linked on a forum.</li>
+        <li><b>First archived</b>: the day the Wayback Machine first saved it.</li>
+        <li><b>Listed</b>: the day the Wayback Machine saved a page that already showed it, such as a gallery page.</li>
+      </ul>
+      <p>These dates mean "the picture existed by this day". Many were taken earlier.</p>
+      <p>Some pictures are dated more closely by estimate instead, and say so:</p>
+      <ul class="date-kinds">
+        <li><b>Level</b>: the character's level shows in the picture, and the character's level history on auno.org says when it was at that level.</li>
+        <li><b>File order</b>: the player numbered their screenshots in order, so an undated one sits between its dated neighbours.</li>
+        <li><b>Series</b>: the date of the other pictures in the same series.</li>
+        <li><b>Copy</b>: the earliest date of another copy of the same picture.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>How the pictures were found</h3>
+      <p>Every picture here is a copy the Internet Archive's Wayback Machine saved, and each one links back to it. Finding them meant following old links from one site to the next:</p>
+      <ol class="steps">
+        <li><b>JeuxOnLine's French forum.</b> JeuxOnLine still keeps its old forums online as a read-only archive, including its <a href="https://archives.jeuxonline.info/forum-63.html" target="_blank" rel="noopener">Anarchy Online forum</a>. Its threads from 2001 to 2003 were read for links to pictures and to the sites that hosted them, which is how <a href="https://web.archive.org/web/2002*/anarchylore.com*" target="_blank" rel="noopener">anarchylore.com</a> and many other fan sites turned up.</li>
+        <li><b>Fan-site directories.</b> <a href="https://web.archive.org/web/2002*/ao-basher.com*" target="_blank" rel="noopener">AO-Basher</a>'s lists of guild and fan sites pointed to about 200 more community sites, each checked for saved pictures.</li>
+        <li><b>The big sites.</b> Funcom's own anarchy-online.com, AO Stratics and IGN's AO Vault: screenshot galleries, "screenshot of the day" features, screenshot contests and news pictures.</li>
+        <li><b>Funcom's forums and the orgs.</b> Screenshot threads from the official forums, and the websites of the largest Atlantean Omni-Tek orgs, found through <a href="https://auno.org/" target="_blank" rel="noopener">auno.org</a>'s org rankings from 2002 and 2003, forum posts and Funcom's org pages.</li>
+        <li><b>Player pages.</b> Personal galleries found along the way, such as MiaJong's long-running screenshot log.</li>
+      </ol>
+      <p>Only what the Wayback Machine happened to save could be recovered. Many pictures linked in forum posts, especially on personal web space, were never archived. The search covered 1999 to 2003.</p>
+    </div>
+  </div>
+  <div class="about-cols">
+    <div>
+      <h3>More concept art</h3>
+      <p>This archive focuses on players' screenshots and keeps only a little concept art. For far more of it, see <a href="https://drive.google.com/drive/folders/0BxuVjelTHvdWRFQ1eE1WQmNkYXc?resourcekey=0-_ioV-8mB3r1TwCgzzbNinw" target="_blank" rel="noopener">Timba's concept art collection</a>, a much larger and more carefully curated archive of Anarchy Online's art.</p>
+    </div>
+    <div>
+      <h3>Rights</h3>
+      <p>Anarchy Online and its artwork belong to Funcom. Screenshots belong to the players and sites that made them. This is a non-commercial fan archive kept for history. To ask for a picture to be removed or credited, <a href="https://github.com/Anarchaeology/anarchaeology.github.io/issues">open an issue on GitHub</a>.</p>
+    </div>
+  </div>
+  <div>
+    <h3>Sources</h3>
+    <ul class="sources" id="sources"></ul>
+  </div>
+</section>
+
+<footer class="wrap foot"><span id="built"></span></footer>
+
+<div id="viewer" hidden role="dialog" aria-modal="true" aria-label="Picture viewer">
+  <div class="v-top">
+    <span id="v-pos" class="v-pos"></span>
+    <span id="v-filter" class="v-filter" hidden></span>
+    <span class="v-keys">← → to move · Esc to close</span>
+    <button type="button" id="v-close" class="v-close">Close</button>
+  </div>
+  <div class="v-main">
+    <div class="v-stage" id="v-stage">
+      <img id="v-img" alt="">
+      <p class="v-loading" id="v-loading" hidden>Loading full size…</p>
+    </div>
+    <aside class="v-info" id="v-info"></aside>
+  </div>
+  <button type="button" class="v-nav v-prev" id="v-prev" aria-label="Previous picture">‹</button>
+  <button type="button" class="v-nav v-next" id="v-next" aria-label="Next picture">›</button>
+</div>
+
+<script src="gallery.js" defer></script>
+</body>
+</html>
