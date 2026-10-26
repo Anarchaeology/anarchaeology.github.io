@@ -6,7 +6,7 @@ const fs = require('fs'), path = require('path');
 const [outPath, scratch, downloads] = process.argv.slice(2);
 const norm = u => { const m = u.match(/^(?:https?:\/\/)?([^/:?#]+)(?::\d+)?(\/[^?#]*)?/i); return m ? m[1].toLowerCase().replace(/^www\./, '') + (m[2] || '/').toLowerCase() : u.toLowerCase(); };
 const seen = new Set();
-for (const c of fs.readdirSync(downloads).filter(n => /^ao_.*_photos$/.test(n))) for (const f of ['manifest.tsv', 'rejected.tsv']) {
+for (const c of fs.readdirSync(downloads).filter(n => /^ao_.*_photos$/.test(n))) for (const f of ['manifest.tsv', 'rejected.tsv', 'turned_down.tsv']) {
   const p = path.join(downloads, c, f);
   if (fs.existsSync(p)) for (const l of fs.readFileSync(p, 'utf8').split('\n').slice(1)) { const u = l.split('\t')[5]; if (u) seen.add(norm(u)); }
 }

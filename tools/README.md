@@ -19,6 +19,9 @@ scripts. Each tool's header comment explains its options in full.
 - Be polite to the Wayback Machine: one request at a time, 5-7 seconds apart, backing off on errors.
 - New finds go into a separate review folder first, are marked by hand, checked for duplicates, then merged.
   Nothing is ever deleted; turned-down pictures move to `_rejected\` and are recorded in `rejected.tsv`.
+- When a review folder is no longer needed, copy its `rejected.tsv` rows into the collection's `turned_down.tsv`
+  (same columns plus the review folder's name) before deleting it. Searches skip everything listed in
+  `manifest.tsv`, `rejected.tsv` and `turned_down.tsv`, so turned-down pictures are never offered again.
 
 ## Adding pictures
 

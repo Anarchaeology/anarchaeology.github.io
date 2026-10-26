@@ -9,7 +9,7 @@ const norm = u => {
   return m ? m[1].toLowerCase().replace(/^www\./, '') + (m[2] || '/').toLowerCase() : u.toLowerCase();
 };
 const seen = new Set();
-for (const c of collections) for (const file of ['manifest.tsv', 'rejected.tsv']) {
+for (const c of collections) for (const file of ['manifest.tsv', 'rejected.tsv', 'turned_down.tsv']) {
   const p = path.join(c, file);
   if (fs.existsSync(p)) for (const l of fs.readFileSync(p, 'utf8').split('\n').slice(1)) { const u = l.split('\t')[5]; if (u) seen.add(norm(u)); }
 }

@@ -18,7 +18,7 @@ for (const f of fs.readdirSync(path.join(checkDir, 'cdx'))) {
 }
 const have = new Set(), turnedDown = new Set();
 for (const dir of collections) {
-  for (const [file, set] of [['manifest.tsv', have], ['rejected.tsv', turnedDown]]) {
+  for (const [file, set] of [['manifest.tsv', have], ['rejected.tsv', turnedDown], ['turned_down.tsv', turnedDown]]) {
     const p = path.join(dir, file);
     if (!fs.existsSync(p)) continue;
     for (const line of fs.readFileSync(p, 'utf8').split('\n').slice(1)) { const u = line.split('\t')[5]; if (u) set.add(norm(u)); }
