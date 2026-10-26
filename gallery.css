@@ -57,9 +57,9 @@ select, input[type="search"] { font: inherit; font-size: 0.9rem; color: var(--in
 .count.on { color: var(--amber); }
 .clear.off { visibility: hidden; }
 .pickers select.on, .pickers input.on { border-color: var(--notum); box-shadow: 0 0 0 1px var(--notum); }
-.clear, .filter-note button { font: inherit; font-size: 0.8rem; color: var(--ink); background: var(--raised); border: 1px solid var(--line);
+.clear, .random, .filter-note button { font: inherit; font-size: 0.8rem; color: var(--ink); background: var(--raised); border: 1px solid var(--line);
   border-radius: 3px; padding: 0.25rem 0.6rem; cursor: pointer; }
-.clear:hover, .filter-note button:hover { border-color: var(--notum); }
+.clear:hover, .random:hover, .filter-note button:hover { border-color: var(--notum); }
 
 /* Shown when filters are on but the filter bar is off screen (on phones it scrolls away with the page). */
 .filter-note { position: fixed; z-index: 6; left: 50%; transform: translateX(-50%); bottom: max(12px, env(safe-area-inset-bottom, 0px));
@@ -136,6 +136,7 @@ select, input[type="search"] { font: inherit; font-size: 0.9rem; color: var(--in
   .tiles { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); }
   .count { min-width: 0; }
   .clear { margin-left: auto; }
+  .random { margin-left: auto; }
   .pickers label { flex: 1 1 100%; }
   .pickers select, .pickers input[type="search"] { flex: 1; max-width: none; }
   .foot { padding-bottom: 5rem; }

@@ -53,6 +53,8 @@
     let timer;
     $('q').oninput = e => { clearTimeout(timer); timer = setTimeout(() => { filter.q = e.target.value.trim().toLowerCase(); render(); }, 150); };
     $('clear').onclick = $('note-clear').onclick = clearFilters;
+    // Opens a random picture from the ones the filters show.
+    $('random').onclick = () => { if (shown.length) { opener = $('random'); open(Math.floor(Math.random() * shown.length), true); } };
     $('note-change').onclick = () => document.querySelector('.controls').scrollIntoView({ block: 'start' });
     // On phones the filter bar scrolls away with the page, so a small note keeps active filters in sight.
     new IntersectionObserver(([e]) => { barInView = e.isIntersecting; showNote(); }).observe(document.querySelector('.controls'));
