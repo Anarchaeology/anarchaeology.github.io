@@ -177,7 +177,7 @@
            : `<li><a href="${esc(p.u)}" target="_blank" rel="noopener">Original address (still online when collected)</a></li>`,
       `<li><a href="${url(p.f)}" target="_blank" rel="noopener">Open the full-size file</a></li>`,
       p.th ? `<li><a href="https://archives.jeuxonline.info/fils/${esc(p.th)}.html" target="_blank" rel="noopener">Forum thread where it was posted (French)</a></li>` : '',
-      p.ft ? `<li><a href="forums/thread/${esc(p.ft)}.html" target="_blank" rel="noopener">Forum thread where it was posted</a></li>` : '',
+      p.ft ? `<li><a href="forums/thread/${esc(p.ft)}" target="_blank" rel="noopener">Forum thread where it was posted</a></li>` : '',
     ].join('');
     $('v-info').innerHTML =
       `<p class="v-date">${longDate(p.d)}${badge}</p>` +

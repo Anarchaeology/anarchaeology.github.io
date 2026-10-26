@@ -52,9 +52,11 @@ var p = new JsonObject
     ["n"] = Path.GetFileName(relWeb), ["w"] = w, ["h"] = h, ["b"] = long.Parse(f[13], CultureInfo.InvariantCulture),
     ["s"] = f[4], ["u"] = f[5], ["wb"] = f[6].Replace("id_/", "/"), ["cd"] = f[7],
 };
-// "ft": the thread on Funcom's forum, now in the forum archive (forums/thread/N.html); "th" is a JeuxOnLine thread
-foreach (var (key, col) in new[] { ("sd", 8), ("fd", 9), ("ft", 10), ("pd", 11), ("ed", 12) })
+foreach (var (key, col) in new[] { ("sd", 8), ("fd", 9), ("pd", 11), ("ed", 12) })
     if (f[col].Length > 0) p[key] = f[col];
+// "ft": where it was posted on Funcom's forum, as a page of the forum archive (N.html, or N-2.html#post123 when set
+// by hand); "th" is a JeuxOnLine thread
+if (f[10].Length > 0) p["ft"] = f[10] + ".html";
 var sorted = photos.Select(x => x!.DeepClone()).Append(p)
     .OrderBy(x => (string)x!["d"]!, StringComparer.Ordinal).ThenBy(x => (string)x!["f"]!, StringComparer.OrdinalIgnoreCase).ToList();
 root["photos"] = new JsonArray(sorted.ToArray());
