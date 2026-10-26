@@ -233,6 +233,8 @@
     else if (e.key === 'ArrowLeft') step(-1);
     else if (e.key === 'Home') step(-current);
     else if (e.key === 'End') step(shown.length - 1 - current);
+    // R jumps to a random other picture from the ones shown.
+    else if (e.key === 'r' || e.key === 'R') { if (shown.length > 1) { const r = Math.floor(Math.random() * (shown.length - 1)); step((r >= current ? r + 1 : r) - current); } }
     else if (e.key === 'Escape') close();
     else return;
     e.preventDefault();
