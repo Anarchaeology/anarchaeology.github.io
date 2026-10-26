@@ -70,6 +70,7 @@ visitors' browsers may keep the old picture list for up to 10 minutes.
 | `DateMiaJong.cs`, `MiaLevels.cs` | Date pictures from a player's numbered screenshot log and character level history |
 | `CrawlSiteImages.cs` | Polite crawler (respects robots.txt) listing a live site's pictures |
 | `BuildOrgSitesPage.cs` | Builds the page listing org websites from Funcom's org directory and whether they still answer |
+| `AddPicture.cs` | Adds one reviewed picture straight to the built site (photo, thumbnail, record in `data/photos.json`), for when the collection folder isn't at hand |
 | `MakeLogo.cs` | Makes `logo.png` and `favicon.png` from a picture |
 | `ConvertWebp.cs` | Converts WebP downloads to PNG |
 
